@@ -1,10 +1,11 @@
 const dotenv = require("dotenv").config()
 const express = require('express')
+require('express-async-errors')
 const connectDB = require('./db/connect')
 const errorHandlerMiddleware = require('./middleware/error-handler')
 const notFound = require('./middleware/not-found')
 const app = express()
-var colors = require('colors');
+const colors = require('colors');
 
 const productRouter = require('./routes/products')
 
